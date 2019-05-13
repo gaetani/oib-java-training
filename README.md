@@ -13,11 +13,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-1 - IDE.
-2 - Java 8 or higher
-3 - Beer
-4 - Maven
-5 - Snacks
+#### 1 - IDE.
+#### 2 - Java 8 or higher
+#### 3 - Beer
+#### 4 - Maven
+#### 5 - Snacks
 
 
 ### Installing
