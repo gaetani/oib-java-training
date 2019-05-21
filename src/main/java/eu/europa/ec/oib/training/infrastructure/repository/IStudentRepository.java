@@ -1,6 +1,6 @@
-package eu.europa.ec.oib.training.repository;
+package eu.europa.ec.oib.training.infrastructure.repository;
 
-import eu.europa.ec.oib.training.model.Student;
+import eu.europa.ec.oib.training.infrastructure.model.Student;
 import org.springframework.data.repository.CrudRepository;
 
 public interface IStudentRepository extends CrudRepository<Student, Long>{

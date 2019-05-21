@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class ApplicationStarter extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
+
         SpringApplication.run(ApplicationStarter.class, args);
     }
 
