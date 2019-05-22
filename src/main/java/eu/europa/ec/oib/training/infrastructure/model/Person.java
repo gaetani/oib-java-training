@@ -9,16 +9,16 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
-@Table(name = "OIB_STUDENT")
+@Table(name = "OIB_PERSON")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING, name = "CO_TYPE")
-public abstract class Person implements Idable<Long> {
+public abstract class Person implements Idable<Integer> {
 
     @Id
     @SequenceGenerator(name = "SQ_PERSON", sequenceName = "OIB_SEQ_PERSON")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_PERSON")
     @Column(name = "NU_PERSON")
-    private Long id;
+    private Integer id;
 
     @Column(name = "NA_PERSON")
     private String name;
@@ -30,7 +30,6 @@ public abstract class Person implements Idable<Long> {
     private Integer mobile;
 
     @Column(name = "DT_CREATION")
-    @Temporal(TemporalType.TIMESTAMP)
     private LocalDate birth;
 
     @Enumerated(value = EnumType.STRING)

@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @DiscriminatorValue("S")
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @Setter
 public class Student extends Person{
 
-
+    @ManyToMany(mappedBy = "studentList")
+    private List<Classroom> classrooms;
 
 }

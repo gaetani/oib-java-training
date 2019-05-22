@@ -9,13 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("api/student")
-public class StudentController {
+public class StudentController extends CrudController<Student, Integer> {
 
     @Autowired
     private IStudentService studentService;
 
-    @GetMapping
-    public Iterable<Student> findAll(){
-        return studentService.findAll();
-    }
 }

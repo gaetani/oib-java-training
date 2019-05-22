@@ -1,15 +1,16 @@
 package eu.europa.ec.oib.training.infrastructure.service;
 
 import eu.europa.ec.oib.training.infrastructure.model.Classroom;
-import eu.europa.ec.oib.training.infrastructure.model.Student;
+import eu.europa.ec.oib.training.infrastructure.model.Teacher;
 import eu.europa.ec.oib.training.infrastructure.repository.IClassroomRepository;
+import eu.europa.ec.oib.training.infrastructure.repository.ITeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StudentService extends AbstractService<Student, Integer> implements IStudentService {
+public class TeacherService extends AbstractService<Teacher, Integer> implements ITeacherService {
 
     @Autowired
-    private IStudentService repository;
+    private ITeacherRepository repository;
 
 }

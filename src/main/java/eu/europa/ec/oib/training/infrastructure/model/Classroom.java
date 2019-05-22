@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -29,6 +30,17 @@ public class Classroom implements Idable<Integer>{
     @ManyToOne
     @JoinColumn(name = "NU_GRADE")
     private Grade grade;
+
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "OIB_CLASSROOM_STUDENT",
+            joinColumns = @JoinColumn(name = "NU_CLASSROOM"),
+            inverseJoinColumns = @JoinColumn(name = "NU_PERSON")
+    )
+    private List<Student> studentList;
+
 
     @ManyToOne
     @JoinColumn(name = "NU_TEACHER")
